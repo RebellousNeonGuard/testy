@@ -63,10 +63,11 @@ header {
     color: #333; 
 }
 .article-page img {
-  max-width: 100%; 
-  height: auto;     
-  display: block;   
-  margin: 1em 0;     
+  max-width: 700px;
+  width: 100vw; /* or a percentage like 80vw for more margin */
+  height: auto;
+  display: block;
+  margin: 1em 0;
 }
 
 
