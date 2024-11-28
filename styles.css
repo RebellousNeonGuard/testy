@@ -37,7 +37,7 @@ header {
     margin-bottom: 10px;
     text-align: center;
     text-decoration: none;
-    color: #black;
+    color: black;
 }
 .post-title:hover {
     color: blue;
