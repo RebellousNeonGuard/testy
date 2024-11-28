@@ -1,4 +1,4 @@
-import postsData from './posts.json'; // импорт данных статей
+import postsData from './posts.json';
 
 interface Post {
   userId: number;
@@ -8,7 +8,7 @@ interface Post {
 }
 
 const postsSection = document.getElementById('posts')!;
-const baseUrl = window.location.pathname.endsWith('/') ? '' : '/'; //  для правильного формирования ссылок на статьи
+const baseUrl = window.location.pathname.endsWith('/') ? '' : '/';
 
 function createPostElement(post: Post): HTMLElement {
     const postElement = document.createElement('div');
@@ -19,29 +19,30 @@ function createPostElement(post: Post): HTMLElement {
     titleElement.textContent = post.title;
 
     const imgElement = document.createElement('img');
-    imgElement.src = 'assets/placeholder.jpg';  // Ваша картинка
+    imgElement.src = 'assets/placeholder.jpg';
     imgElement.alt = post.title;
     imgElement.loading = 'lazy';
 
     const linkElement = document.createElement('a');
-    linkElement.href = `${baseUrl}post/${post.id}`;
+    linkElement.href = `${baseUrl}post.html?id=${post.id}`;
     linkElement.appendChild(titleElement);
 
     postElement.appendChild(imgElement);
     postElement.appendChild(linkElement);
 
-
     return postElement;
 }
 
-//Вывод списка постов на главной странице
+// Отображение списка постов на главной странице
 postsData.forEach(post => {
   postsSection.appendChild(createPostElement(post));
 });
 
-//Вывод статьи на странице статьи
-const params = new URLSearchParams(window.location.search);
-const postId = params.get('id');
+
+// Отображение статьи на странице статьи (post.html)
+const urlParams = new URLSearchParams(window.location.search);
+const postId = urlParams.get('id');
+
 if (postId) {
     const post = postsData.find(p => p.id === parseInt(postId));
     if (post) {
