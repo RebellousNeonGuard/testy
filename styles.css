@@ -41,15 +41,47 @@ header {
 }
 
 /* Стили для страницы статьи */
+/* Стили для страницы статьи */
 .article-page {
     padding: 20px;
+    max-width: 960px; /* Maximum width for better readability */
+    margin: 0 auto; /* Center the content */
 }
 
 .article-title {
     font-size: 2em;
     margin-bottom: 10px;
+    font-weight: bold; /* Add boldness for better emphasis */
 }
 
 .article-body {
+    font-size: 1em; /* Default font size */
+    line-height: 1.6; /* Improve readability with better line spacing */
     margin-bottom: 20px;
+    color: #333; /* Darker text color for better contrast */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .article-page {
+        padding: 10px; /* Reduce padding on smaller screens */
+    }
+    .article-title {
+        font-size: 1.5em; /* Reduce title size */
+    }
+    .article-body {
+        font-size: 0.9em; /* Reduce text size */
+    }
+}
+
+@media (max-width: 480px) {
+    .article-page {
+        padding: 5px; /* Further reduce padding */
+    }
+    .article-title {
+        font-size: 1.2em; /* Further reduce title size */
+    }
+    .article-body {
+        font-size: 0.8em; /* Further reduce text size */
+    }
 }
