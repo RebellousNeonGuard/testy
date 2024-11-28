@@ -32,6 +32,8 @@ header {
 .post-title {
     font-weight: bold;
     margin-bottom: 10px;
+    text-align: center;
+    color: #0000;
 }
 
 /* Стили для страницы статьи */
