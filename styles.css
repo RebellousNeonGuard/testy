@@ -13,7 +13,7 @@ header {
 
 #posts {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Адаптивная сетка */
     grid-gap: 20px;
     padding: 20px;
 }
@@ -26,21 +26,24 @@ header {
 .post img {
     width: 100%;
     height: auto;
-    display: block; /* Prevents extra whitespace */
+    display: block; /* Убирает лишние пробелы */
 }
 
 .post-title {
     font-weight: bold;
     margin-bottom: 10px;
 }
-/*Стили для страницы статьи*/
+
+/* Стили для страницы статьи */
 .article-page {
     padding: 20px;
 }
+
 .article-title {
     font-size: 2em;
     margin-bottom: 10px;
 }
+
 .article-body {
     margin-bottom: 20px;
 }
