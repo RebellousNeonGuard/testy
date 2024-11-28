@@ -1,4 +1,4 @@
-onst postsSection = document.getElementById("posts")
+const postsSection = document.getElementById("posts")
 const baseUrl = window.location.pathname.endsWith("/") ? "" : "/"
 
 function createPostElement(post) {
